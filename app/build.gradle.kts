@@ -3,6 +3,12 @@ plugins {
     id("com.github.ben-manes.versions") version "0.52.0"
     application
     id("org.sonarqube") version "6.2.0.5505"
+    checkstyle
+}
+
+checkstyle {
+    toolVersion = "10.12.0"
+    configFile = file("config/checkstyle/checkstyle.xml")
 }
 
 sonar {
