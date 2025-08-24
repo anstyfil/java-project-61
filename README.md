@@ -33,3 +33,5 @@ Rating](https://sonarcloud.io/api/project_badges/measure?project=anstyfil_java-p
 asciinema (Even game): https://asciinema.org/a/eq7sEB7Dt3NGPWQZE7Yxymcai
 asciinema (Calculator game): https://asciinema.org/a/uOfKXeVmYvxg1il4bAUzRQWEX
 asciinema (GCD game): https://asciinema.org/a/UM5qg6P9u8yx0mdluZw7lcrAW
+asciinema (AP game): https://asciinema.org/a/LvcptKJX1HAAG4M058U017Bzb
+
