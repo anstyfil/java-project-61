@@ -4,26 +4,18 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class EvenOddGame {
-    public static void PlayRound() {
+    public static void playRound() {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        String userName = Cli.getByName();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
-        int numbOfQuestions = 3;
-        for (int i = 0; i < numbOfQuestions; i++) {
-            int randomNumb = random.nextInt(1, 101);
-            System.out.println("Questions: " + randomNumb);
-            System.out.println("Your answer: ");
-            String UserAnswer = sc.nextLine();
-            String isEven = isEven(randomNumb) ? "yes" : "no";
-            if (!UserAnswer.equals(isEven)) {
-                System.out.println("'" + UserAnswer + "' is wrong answer ;(. Correct answer is '" + isEven + "'");
-                System.out.println("Let's try again, " + userName);
-                return;
-            }
-            System.out.println("Correct!");
+        final String description = "Answer 'yes' if the number is even, otherwise answer 'no'";
+        String[][] round = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+
+            String randomNumb = Integer.toString(random.nextInt(1, 101));
+            round[i][0] = randomNumb;
+            round[i][1] = isEven(Integer.parseInt(randomNumb)) ? "yes" : "no";
         }
-        System.out.println("Congratulations, " + userName);
+        Engine.play(description, round);
     }
     private static boolean isEven(int number) {
         return number % 2 == 0;

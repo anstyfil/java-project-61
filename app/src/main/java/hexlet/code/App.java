@@ -17,7 +17,7 @@ public class App {
                 Cli.getByName();
                 break;
             case 2:
-                EvenOddGame.PlayRound();
+                EvenOddGame.playRound();
                 break;
             default:
                 System.out.println("This number doesn't exist here");
