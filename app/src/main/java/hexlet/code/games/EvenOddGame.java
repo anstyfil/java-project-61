@@ -13,7 +13,7 @@ public class EvenOddGame {
         String[][] round = new String[Engine.ROUNDS][2];
         for (int i = 0; i < Engine.ROUNDS; i++) {
 
-            String randomNumb = Integer.toString(random.nextInt(1, 101));
+            String randomNumb = Integer.toString(random.nextInt(1, 1001));
             round[i][0] = randomNumb;
             round[i][1] = isEven(Integer.parseInt(randomNumb)) ? "yes" : "no";
         }
