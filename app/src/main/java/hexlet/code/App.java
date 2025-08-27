@@ -1,9 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.games.EvenOddGame;
 import hexlet.code.games.AP;
 import hexlet.code.games.Calc;
-import hexlet.code.games.EvenOddGame;
 import hexlet.code.games.GCD;
+import hexlet.code.games.PrimeNumbers;
 
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter\n1 - Greet\n2 - Even");
-        System.out.println("3 - Calc\n4 - GCD\n5 - AP\n0 - Exit");
+        System.out.println("3 - Calc\n4 - GCD\n5 - AP\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
         int choice = sc.nextInt(); //Integer.parseInt(sc.nextLine());
         switch (choice) {
@@ -33,6 +34,9 @@ public class App {
                 break;
             case 5:
                 AP.playRound();
+                break;
+            case 6:
+                PrimeNumbers.playRound();
                 break;
             default:
                 System.out.println("This number doesn't exist here");
