@@ -13,9 +13,9 @@ public class Engine {
             String question = rounds[i][0];
             String correctAnswer = rounds[i][1];
 
-            System.out.println("Questions: " + question);
-            System.out.println("Your answer: ");
-            String userAnswer = sc.nextLine();
+            System.out.println("Question: " + question);
+            System.out.print("Your answer: ");
+            String userAnswer = sc.nextLine().toLowerCase();
 
             if (!userAnswer.equals(correctAnswer)) {
                 System.out.print("'" + userAnswer + "' is wrong answer ;(. ");
@@ -25,7 +25,7 @@ public class Engine {
             }
             System.out.println("Correct!");
         }
-        System.out.println("Congratulations, " + userName);
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     public static String greeting(Scanner sc) {
