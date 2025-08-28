@@ -6,10 +6,7 @@ public class Engine {
     public static final int ROUNDS = 3;
     public static void play(String description, String[][] rounds) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String userName = sc.nextLine();
-        System.out.println("Hello, " + userName);
+        String userName = greeting(sc);
         System.out.println(description);
 
         for (int i = 0; i < ROUNDS; i++) {
@@ -29,5 +26,13 @@ public class Engine {
             System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + userName);
+    }
+
+    public static String greeting(Scanner sc) {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = sc.nextLine();
+        System.out.println("Hello, " + userName);
+        return userName;
     }
 }

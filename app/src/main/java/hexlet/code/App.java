@@ -16,12 +16,12 @@ public class App {
         System.out.println("Please enter the game number and press Enter\n1 - Greet\n2 - Even");
         System.out.println("3 - Calc\n4 - GCD\n5 - AP\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
-        int choice = sc.nextInt(); //Integer.parseInt(sc.nextLine());
+        int choice = Integer.parseInt(sc.nextLine());
         switch (choice) {
             case 0:
                 break;
             case 1:
-                Cli.getByName();
+                Engine.greeting(sc);
                 break;
             case 2:
                 EvenOddGame.playRound();
