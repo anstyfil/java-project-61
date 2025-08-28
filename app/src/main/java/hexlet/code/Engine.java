@@ -32,7 +32,7 @@ public class Engine {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String userName = sc.nextLine();
-        System.out.println("Hello, " + userName);
+        System.out.println("Hello, " + userName + "!");
         return userName;
     }
 }
