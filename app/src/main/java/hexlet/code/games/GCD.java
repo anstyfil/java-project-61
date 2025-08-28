@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GCD {
-    static final String DESCRIPTION = "Find the greatest common divisor of given numbers";
+    static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
     public static void playRound() {
         Scanner sc = new Scanner(System.in);
