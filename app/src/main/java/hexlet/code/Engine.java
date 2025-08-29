@@ -20,7 +20,7 @@ public class Engine {
             if (!userAnswer.equals(correctAnswer)) {
                 System.out.print("'" + userAnswer + "' is wrong answer ;(. ");
                 System.out.println("Correct answer was '" + correctAnswer + "'");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Correct!");
