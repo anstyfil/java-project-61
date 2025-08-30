@@ -13,29 +13,37 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        final int choiceExit = 0;
+        final int choiceGreet = 1;
+        final int choiceEven = 2;
+        final int choiceCalc = 3;
+        final int choiceGCD = 4;
+        final int choiceAP = 5;
+        final int choicePrime = 6;
         System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even");
         System.out.println("3 - Calc\n4 - GCD\n5 - AP\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
-        int choice = Integer.parseInt(sc.nextLine());
-        switch (choice) {
-            case 0:
+
+        int userChoice = Integer.parseInt(sc.nextLine());
+        switch (userChoice) {
+            case choiceExit:
                 break;
-            case 1:
+            case choiceGreet:
                 Engine.greeting(sc);
                 break;
-            case 2:
+            case choiceEven:
                 EvenOddGame.playRound();
                 break;
-            case 3:
+            case choiceCalc:
                 Calc.playRound();
                 break;
-            case 4:
+            case choiceGCD:
                 GCD.playRound();
                 break;
-            case 5:
+            case choiceAP:
                 AP.playRound();
                 break;
-            case 6:
+            case choicePrime:
                 PrimeNumbers.playRound();
                 break;
             default:

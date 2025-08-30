@@ -3,21 +3,23 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import java.util.Random;
-import java.util.Scanner;
 
 
 public class AP {
     static final String DESCRIPTION = "What number is missing in the progression?";
 
     public static void playRound() {
-        Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
         String[][] round = new String[Engine.ROUNDS][2];
+        final int randMinLength = 5;
+        final int randMaxLength = 11;
+        final int randMaxStartNumb = 20;
+        final int randMaxStep = 10;
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int lengthOfAp = random.nextInt(5, 11);
-            int startNumb = random.nextInt(1, 20);
-            int step = random.nextInt(2, 10);
+            int lengthOfAp = random.nextInt(randMinLength, randMaxLength);
+            int startNumb = random.nextInt(1, randMaxStartNumb);
+            int step = random.nextInt(2, randMaxStep);
 
             int hiddenIndex = random.nextInt(0, lengthOfAp);
             String[] sequenceWithHidden = createSequence(lengthOfAp, startNumb, step);
