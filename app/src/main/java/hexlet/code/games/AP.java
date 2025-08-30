@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,13 +18,13 @@ public class AP {
             int lengthOfAp = random.nextInt(5, 11);
             int startNumb = random.nextInt(1, 20);
             int step = random.nextInt(2, 10);
+
             int hiddenIndex = random.nextInt(0, lengthOfAp);
-            String hiddenElement = createSequence(lengthOfAp, startNumb, step)[hiddenIndex];
             String[] sequenceWithHidden = createSequence(lengthOfAp, startNumb, step);
+            round[i][1] = sequenceWithHidden[hiddenIndex];
 
             sequenceWithHidden[hiddenIndex] = "..";
-            round[i][0] = Arrays.toString(sequenceWithHidden);
-            round[i][1] = hiddenElement;
+            round[i][0] = String.join(" ", sequenceWithHidden);
         }
         Engine.play(DESCRIPTION, round);
     }
