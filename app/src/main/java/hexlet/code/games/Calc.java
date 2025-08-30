@@ -13,10 +13,10 @@ public class Calc {
         Random random = new Random();
 
         String[][] round = new String[Engine.ROUNDS][2];
-
+        final int randMax = 1000;
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int firstNumb = random.nextInt(1, 1001);
-            int secondNumb = random.nextInt(1, 1001);
+            int firstNumb = random.nextInt(1, randMax);
+            int secondNumb = random.nextInt(1, randMax);
             char[] operations = {'+', '-', '*'};
             char op = operations[random.nextInt(0, operations.length - 1)];
             //sc.nextLine();

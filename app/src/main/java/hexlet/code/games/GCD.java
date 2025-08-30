@@ -14,10 +14,10 @@ public class GCD {
 
         String[][] round = new String[Engine.ROUNDS][2];
         int gcd = 0;
-
+        final int randMax = 1000;
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int firstNumb = random.nextInt(1, 1001);
-            int secondNumb = random.nextInt(1, 1001);
+            int firstNumb = random.nextInt(1, randMax);
+            int secondNumb = random.nextInt(1, randMax);
             round[i][0] = firstNumb + " " + secondNumb;
             if (secondNumb == 0) {
                 gcd = firstNumb;
