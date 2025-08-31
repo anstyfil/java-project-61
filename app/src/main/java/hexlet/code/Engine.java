@@ -2,7 +2,10 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
+    private Engine() {
+
+    }
     public static final int ROUNDS = 3;
     public static void play(String description, String[][] rounds) {
         Scanner sc = new Scanner(System.in);

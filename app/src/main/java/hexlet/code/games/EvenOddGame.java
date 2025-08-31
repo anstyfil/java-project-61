@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class EvenOddGame {
+public final class EvenOddGame {
+    private EvenOddGame() {
+
+    }
     public static void playRound() {
         Random random = new Random();
         final String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";

@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class Calc {
+public final class Calc {
+    private Calc() {
+
+    }
     static final String DESCRPTION = "What is the result of the expression?";
 
     public static void playRound() {

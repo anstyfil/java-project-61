@@ -5,7 +5,10 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 
-public class AP {
+public final class AP {
+    private AP() {
+
+    }
     static final String DESCRIPTION = "What number is missing in the progression?";
 
     public static void playRound() {

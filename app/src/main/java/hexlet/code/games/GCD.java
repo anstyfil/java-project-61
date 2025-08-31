@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class GCD {
+public final class GCD {
+    private GCD() {
+
+    }
     static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
     public static void playRound() {

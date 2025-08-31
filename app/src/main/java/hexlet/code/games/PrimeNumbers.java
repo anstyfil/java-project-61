@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class PrimeNumbers {
+public final class PrimeNumbers {
+    private PrimeNumbers() {
+
+    }
     static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void playRound() {
