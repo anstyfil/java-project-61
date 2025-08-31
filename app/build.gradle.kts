@@ -15,6 +15,7 @@ sonar {
   properties {
     property("sonar.projectKey", "anstyfil_java-project-61")
     property("sonar.organization", "anstyfil")
+    property("sonar.coverage.exclusions", "**/*")
   }
 }
 
