@@ -11,23 +11,29 @@ public final class GCD {
 
     public static void playRound() {
         String[][] round = new String[Engine.ROUNDS][2];
-        int gcd = 0;
         final int randMax = 1000;
         for (int i = 0; i < Engine.ROUNDS; i++) {
             int firstNumb = Utils.generateNumber(1, randMax);
             int secondNumb = Utils.generateNumber(1, randMax);
             round[i][0] = firstNumb + " " + secondNumb;
-            if (secondNumb == 0) {
-                gcd = firstNumb;
-            } else {
-                while (secondNumb != 0) {
-                    gcd = secondNumb;
-                    secondNumb = firstNumb % secondNumb;
-                    firstNumb = gcd;
-                }
-            }
+
+            int gcd = findGCD(firstNumb, secondNumb);
             round[i][1] = Integer.toString(gcd);
         }
         Engine.play(DESCRIPTION, round);
+    }
+
+    public static int findGCD(int firstNumb, int secondNumb) {
+        int gcd = 0;
+        if (secondNumb == 0) {
+            gcd = firstNumb;
+        } else {
+            while (secondNumb != 0) {
+                gcd = secondNumb;
+                secondNumb = firstNumb % secondNumb;
+                firstNumb = gcd;
+            }
+        }
+        return gcd;
     }
 }
