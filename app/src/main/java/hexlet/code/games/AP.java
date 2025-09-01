@@ -20,7 +20,7 @@ public final class AP {
             int startNumb = Utils.generateNumber(1, randMaxStartNumb);
             int step = Utils.generateNumber(2, randMaxStep);
 
-            int hiddenIndex = Utils.generateNumber(0, lengthOfAp);
+            int hiddenIndex = Utils.generateNumber(0, lengthOfAp - 1);
             String[] sequenceWithHidden = createSequence(lengthOfAp, startNumb, step);
             round[i][1] = sequenceWithHidden[hiddenIndex];
 
