@@ -28,10 +28,17 @@ Debt](https://sonarcloud.io/api/project_badges/measure?project=anstyfil_java-pro
 Rating](https://sonarcloud.io/api/project_badges/measure?project=anstyfil_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=anstyfil_java-project-61)
 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=anstyfil_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=anstyfil_java-project-61)
-
-
-asciinema (Even game): https://asciinema.org/a/eq7sEB7Dt3NGPWQZE7Yxymcai
-asciinema (Calculator game): https://asciinema.org/a/uOfKXeVmYvxg1il4bAUzRQWEX
-asciinema (GCD game): https://asciinema.org/a/UM5qg6P9u8yx0mdluZw7lcrAW
-asciinema (AP game): https://asciinema.org/a/LvcptKJX1HAAG4M058U017Bzb
-asciinema (Prime game): https://asciinema.org/a/GKTvsJf0Kf5oRYDFw4CXVajq1
+## Games
+A set of a small CLI games: **Even**, **Calc**, **GCD**, **Progression**, and **Prime**
+Game asks questions. Your goal is to give several correct answers.
+## Run with Gradle
+./gradlew run
+## Using make 
+make build
+make run-dist
+## Demo asciinema
+- [Even game](https://asciinema.org/a/eq7sEB7Dt3NGPWQZE7Yxymcai)
+- [Calculator](https://asciinema.org/a/uOfKXeVmYvxg1il4bAUzRQWEX)
+- [GCD](https://asciinema.org/a/UM5qg6P9u8yx0mdluZw7lcrAW)
+- [AP (progression)](https://asciinema.org/a/LvcptKJX1HAAG4M058U017Bzb)
+- [Prime](https://asciinema.org/a/GKTvsJf0Kf5oRYDFw4CXVajq1)
