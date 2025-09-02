@@ -47,7 +47,7 @@ public class App {
                 PrimeNumbers.playRound();
                 break;
             default:
-                System.out.println("This number doesn't exist here");
+                System.out.println(userChoice + " - doesn't exist here.\n");
                 break;
         }
     }
