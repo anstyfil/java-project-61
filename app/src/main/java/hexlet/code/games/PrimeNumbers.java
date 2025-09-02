@@ -33,7 +33,7 @@ public final class PrimeNumbers {
         }
 
         final int firstOddDivisor = 3;
-        for (int i = firstOddDivisor; i * i < num; i++) {
+        for (int i = firstOddDivisor; i * i <= num; i += 2) {
             if (num % i == 0) {
                 return false;
             }
