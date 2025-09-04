@@ -17,22 +17,27 @@ public final class Calc {
             int secondNumb = Utils.generateNumber(1, randMax);
             char[] operations = {'+', '-', '*'};
             char op = operations[Utils.generateNumber(0, operations.length - 1)];
-
-            int result = 0;
-            switch (op) {
-                case '+':
-                    result = firstNumb + secondNumb;
-                    break;
-                case '-':
-                    result = firstNumb - secondNumb;
-                    break;
-                default:
-                    result = firstNumb * secondNumb;
-                    break;
-            }
+            int result = computeResult(op, firstNumb, secondNumb);
             round[i][0] = firstNumb + " " + op + " " + secondNumb;
             round[i][1] = Integer.toString(result);
         }
         Engine.play(DESCRPTION, round);
+    }
+    private static int computeResult(char op, int firstNumb, int secondNumb) {
+        int result = 0;
+        switch (op) {
+            case '+':
+                result = firstNumb + secondNumb;
+                break;
+            case '-':
+                result = firstNumb - secondNumb;
+                break;
+            case '*':
+                result = firstNumb * secondNumb;
+                break;
+            default:
+                throw new RuntimeException("Unknown input: " + op);
+        }
+        return result;
     }
 }
