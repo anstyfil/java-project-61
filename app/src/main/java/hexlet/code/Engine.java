@@ -12,9 +12,9 @@ public final class Engine {
         String userName = greeting(sc);
         System.out.println(description);
 
-        for (int i = 0; i < ROUNDS; i++) {
-            String question = rounds[i][0];
-            String correctAnswer = rounds[i][1];
+        for (String[] round : rounds) {
+            String question = round[0];
+            String correctAnswer = round[1];
 
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
